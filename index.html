@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="appBSI">
+	<head>
+    	<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Frases BSI</title>
+		<link rel="stylesheet" href="app/css/bootstrap.min.css">			
+		<link rel="stylesheet" href="app/css/style.css">			
+		<link rel="shortcut icon" href="app/img/icon.png">		
+		<meta name="description" content="Frases - Bacharel em Sistemas de Informação">
+  	</head>
+	<body ng-controller="ctrlBSI">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<blockquote>
+      					<p>{{bsi.frase}}</p>
+      					<footer>{{bsi.author}}</footer>
+    				</blockquote>
+				</div>
+			</div>
+		</div>
+		<script src="app/js/angular.min.js"></script>
+		<script type="text/javascript">
+		var app = angular.module("appBSI", []);
+		app.controller('ctrlBSI', ['$scope', function ($scope) {
+			
+			$scope.bsi = {};
+
+			$scope.frases = [
+				{ "author" : "Fábio Dippold", "frase" : "Cadê o UML?" },
+				{ "author" : "Manfred Hail Junior", "frase" : "Cadê a Silvana?" }
+			];
+
+			$scope.bsi = $scope.frases[parseInt(Math.floor(Math.random() * $scope.frases.length))];
+
+		}]);
+		</script>
+	</body>
+</html>
