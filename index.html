@@ -13,10 +13,10 @@
 	<body ng-controller="ctrlBSI">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12 text-center">
+				<div class="col-sm-12 text-center ng-cloak">
 					<blockquote>
-      					<p ng-bind-html="bsi.frase"></p>
-      					<footer ng-bind-html="bsi.author"></footer>
+      					<p>{{bsi.frase}}</p>
+      					<footer>{{bsi.author}}</footer>
     				</blockquote>
 				</div>
 			</div>
