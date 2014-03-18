@@ -13,7 +13,7 @@
 	<body ng-controller="ctrlBSI">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12 text-center">
+				<div class="col-sm-12 text-center ng-cloak">
 					<blockquote>
       					<p>{{bsi.frase}}</p>
       					<footer>{{bsi.author}}</footer>
@@ -31,10 +31,12 @@
 			$scope.frases = [
 				{ "author" : "Fábio Dippold", "frase" : "Cadê o UML?" },
 				{ "author" : "Professor Luciano", "frase" : "Cadê a Silvana?" },
-				{ "author" : "Mauri Ferrandin", "frase" : "E ferrou!" },
+				{ "author" : "Mauri", "frase" : "E ferrou!" },
 				{ "author" : "Turma BSI", "frase" : "João, apaga a luz!" },
 				{ "author" : "Desconhecido", "frase" : "Fecha o ar e desliga a janela!" },
-				{ "author" : "Roberto", "frase" : "Oi, eu sou o Bruno e esse é o Roberto." }
+				{ "author" : "Roberto", "frase" : "Oi, eu sou o Bruno e esse é o Roberto." },
+				{ "author" : "Manfred", "frase" : "Executa, espera, executa, espera, executa, espera..." },
+				{ "author" : "Turma BSI", "frase" : "João, abre a janela! João, fecha a janela!" }
 			];
 
 			$scope.bsi = $scope.frases[parseInt(Math.floor(Math.random() * $scope.frases.length))];
