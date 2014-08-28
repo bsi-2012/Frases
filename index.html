@@ -1,84 +1,80 @@
 <!DOCTYPE html>
 <html ng-app="appBSI">
-  <head>
-      <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Frases BSI</title>
-    <link rel="stylesheet" href="app/css/bootstrap.min.css">
-    <link rel="stylesheet" href="app/css/style.css">
-    <link rel="shortcut icon" href="app/img/icon.jpg">
-    <meta name="description" content="Frases - Bacharel em Sistemas de Informação">
-    </head>
-  <body ng-controller="ctrlBSI">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 text-center ng-cloak">
-          <blockquote>
-                <p>{{bsi.frase}}</p>
-                <footer>{{bsi.author}}</footer>
-            </blockquote>
-        </div>
-      </div>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frases BSI</title>
+  <link rel="shortcut icon" href="app/img/icon.jpg">
+  <meta name="description" content="Frases - Bacharel em Sistemas de Informação">
+</head>
+<body ng-controller="ctrlBSI">
+
+  <main class="main-container">
+    <div class="quote-container ng-cloak">
+      <p>{{bsi.frase}}</p>
+      <small>{{bsi.author}}</small>
     </div>
-    <script src="app/js/angular.min.js"></script>
-    <script type="text/javascript">
-    var app = angular.module("appBSI", []);
-    app.controller('ctrlBSI', ['$scope', function ($scope) {
+  </main>
 
-      $scope.bsi = {};
+  <script src="app/js/angular.min.js"></script>
+  <script type="text/javascript">
+  var app = angular.module("appBSI", []);
+  app.controller('ctrlBSI', ['$scope', function ($scope) {
 
-      $scope.frases = [
-        { "author" : "Fábio Dippold", "frase" : "Cadê o UML?" },
-        { "author" : "Professor Luciano", "frase" : "Cadê a Silvana?" },
-        { "author" : "Mauri", "frase" : "E ferrou!" },
-        { "author" : "Turma BSI", "frase" : "João, apaga a luz!" },
-        { "author" : "Pandini", "frase" : "Fecha o ar e desliga a janela!" },
-        { "author" : "Roberto", "frase" : "Oi, eu sou o Bruno e esse é o Roberto." },
-        { "author" : "Manfred", "frase" : "Executa, espera, executa, espera, executa, espera..." },
-        { "author" : "Turma BSI", "frase" : "João, abre a janela! João, fecha a janela!" },
-        { "author" : "Fabrício", "frase" : "Só peada boa!" },
-        { "author" : "Fábio Dippold", "frase" : "Qual é o número da sua matrícula?" },
-        { "author" : "Mauri", "frase" : "Fazer uma 'pioria', e piorou..." },
-        { "author" : "Mauri", "frase" : "Sério que vocês não tinham percebido ainda? Risos." },
-        { "author" : "João", "frase" : "Prioridade tem prioridade!" },
-        { "author" : "João", "frase" : "Comprei um Galaxi S4 caído do caminhão! #FelizPakas#Sa sung" },
-        { "author" : "Castoldi", "frase" : "É component!" },
-        { "author" : "João", "frase" : "Hoje estou tão disposto que quando chegar em casa vou ver um video de matemática.." },
-        { "author" : "Fábio Dippold", "frase" : "Faz o seguinte dá uma olhada no meu modelo de referência." },
-        { "author" : "Fábio Dippold", "frase" : "O projeto de referência está lá no google docs!" },
-        { "author" : "Castoldi", "frase" : "Cadê os pinceis?" },
-        { "author" : "Castoldi", "frase" : "Querem uma história de fadas ou não?" },
-        { "author" : "Joe Vogel", "frase" : "Programa do Diabo!!!"},
-        { "author" : "Mauri", "frase" : "Bairro ou Bairo? É Bairrow?!"},
-        { "author" : "Renaldo Viola", "frase" : "Cedoooo!"},
-        { "author" : "Turma BSI", "frase" : "Calado e-milho!"},
-        { "author" : "Irmã do Fabrício", "frase" : "Eu sou pequena, não sei ler ainda!"},
-        { "author" : "Graziele", "frase" : "Ele é louco!"},
-        { "author" : "Fabrício", "frase" : "Ok Glass_Fish, EJB remote get direction 'exted street implements' patineti to UNERJ."},
-        { "author" : "João", "frase" : "Desenhar o Joe é fácil, é só fazer uma bola com 2 buracos!"},
-        { "author" : "Darcio", "frase" : "Calma... calma..." },
-        { "author" : "Lucas", "frase": "Nahh... What the hell?!" },
-        { "author" : "João", "frase": "Ae! Acertei!" },
-        { "author" : "Emiliano", "frase": "Aquele cara da StudioFM, o Porta Mala!" },
-        { "author" : "Lucas", "frase": "Calma, Carla." },
-        { "author" : "Manfred", "frase": "Eu conectei na porta 80 dele." },
-        { "author" : "Fabricio", "frase": "Erro!" },
-        { "author" : "Kather", "frase": "Captei frases de minha autoria." },
-        { "author" : "Joe Vogel", "frase": "Como que eles dizem? Propunhavam?" },
-        { "author" : "Roberto", "frase": "Uma melhoria melhor." },
-        { "author" : "Joe Vogel", "frase": "Meio pouco visível." },
-        { "author" : "Cleiton", "frase": "É uma metodologia e... tem um bixo aqui!" },
-        { "author" : "Lucas", "frase": "É JAVA!" },
-        { "author" : "Kather", "frase": "Tua Avó!" },
-        { "author" : "Carla", "frase": "Viu?! Teimoso!"},
-        { "author" : "Lucas", "frase": "Mas nem o professor chega no horário!" },
-        { "author" : "João", "frase": "Se colocar o L no final do nome do Joe fica Joel!" }
-      ];
+    $scope.bsi = {};
 
-      $scope.bsi = $scope.frases[parseInt(Math.floor(Math.random() * $scope.frases.length))];
+    $scope.frases = [
+      { "author" : "Fábio Dippold", "frase" : "Cadê o UML?" },
+      { "author" : "Professor Luciano", "frase" : "Cadê a Silvana?" },
+      { "author" : "Mauri", "frase" : "E ferrou!" },
+      { "author" : "Turma BSI", "frase" : "João, apaga a luz!" },
+      { "author" : "Pandini", "frase" : "Fecha o ar e desliga a janela!" },
+      { "author" : "Roberto", "frase" : "Oi, eu sou o Bruno e esse é o Roberto." },
+      { "author" : "Manfred", "frase" : "Executa, espera, executa, espera, executa, espera..." },
+      { "author" : "Turma BSI", "frase" : "João, abre a janela! João, fecha a janela!" },
+      { "author" : "Fabrício", "frase" : "Só peada boa!" },
+      { "author" : "Fábio Dippold", "frase" : "Qual é o número da sua matrícula?" },
+      { "author" : "Mauri", "frase" : "Fazer uma 'pioria', e piorou..." },
+      { "author" : "Mauri", "frase" : "Sério que vocês não tinham percebido ainda? Risos." },
+      { "author" : "João", "frase" : "Prioridade tem prioridade!" },
+      { "author" : "João", "frase" : "Comprei um Galaxi S4 caído do caminhão! #FelizPakas#Sa sung" },
+      { "author" : "Castoldi", "frase" : "É component!" },
+      { "author" : "João", "frase" : "Hoje estou tão disposto que quando chegar em casa vou ver um video de matemática.." },
+      { "author" : "Fábio Dippold", "frase" : "Faz o seguinte dá uma olhada no meu modelo de referência." },
+      { "author" : "Fábio Dippold", "frase" : "O projeto de referência está lá no google docs!" },
+      { "author" : "Castoldi", "frase" : "Cadê os pinceis?" },
+      { "author" : "Castoldi", "frase" : "Querem uma história de fadas ou não?" },
+      { "author" : "Joe Vogel", "frase" : "Programa do Diabo!!!"},
+      { "author" : "Mauri", "frase" : "Bairro ou Bairo? É Bairrow?!"},
+      { "author" : "Renaldo Viola", "frase" : "Cedoooo!"},
+      { "author" : "Turma BSI", "frase" : "Calado e-milho!"},
+      { "author" : "Irmã do Fabrício", "frase" : "Eu sou pequena, não sei ler ainda!"},
+      { "author" : "Graziele", "frase" : "Ele é louco!"},
+      { "author" : "Fabrício", "frase" : "Ok Glass_Fish, EJB remote get direction 'exted street implements' patineti to UNERJ."},
+      { "author" : "João", "frase" : "Desenhar o Joe é fácil, é só fazer uma bola com 2 buracos!"},
+      { "author" : "Darcio", "frase" : "Calma... calma..." },
+      { "author" : "Lucas", "frase": "Nahh... What the hell?!" },
+      { "author" : "João", "frase": "Ae! Acertei!" },
+      { "author" : "Emiliano", "frase": "Aquele cara da StudioFM, o Porta Mala!" },
+      { "author" : "Lucas", "frase": "Calma, Carla." },
+      { "author" : "Manfred", "frase": "Eu conectei na porta 80 dele." },
+      { "author" : "Fabricio", "frase": "Erro!" },
+      { "author" : "Kather", "frase": "Captei frases de minha autoria." },
+      { "author" : "Joe Vogel", "frase": "Como que eles dizem? Propunhavam?" },
+      { "author" : "Roberto", "frase": "Uma melhoria melhor." },
+      { "author" : "Joe Vogel", "frase": "Meio pouco visível." },
+      { "author" : "Cleiton", "frase": "É uma metodologia e... tem um bixo aqui!" },
+      { "author" : "Lucas", "frase": "É JAVA!" },
+      { "author" : "Kather", "frase": "Tua Avó!" },
+      { "author" : "Carla", "frase": "Viu?! Teimoso!"},
+      { "author" : "Lucas", "frase": "Mas nem o professor chega no horário!" },
+      { "author" : "João", "frase": "Se colocar o L no final do nome do Joe fica Joel!" }
+    ];
 
-    }]);
-    </script>
-  </body>
+    $scope.bsi = $scope.frases[parseInt(Math.floor(Math.random() * $scope.frases.length))];
+
+  }]);
+  </script>
+</body>
 </html>
