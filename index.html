@@ -5,7 +5,66 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Frases BSI</title>
-  <link rel="stylesheet" href="css/bsi.css">
+
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+  }
+
+  *, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+   }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    font-family: sans-serif;
+    font-weight: 400;
+    background: whitesmoke;
+    color: #030303;
+  }
+
+  .main-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 20px;
+  }
+
+  .quote-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 1000px;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .quote__ {
+    font-size: 40px;
+    line-height: 45px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-left: 10px solid #08c;
+  }
+
+  .author__ {
+    color: #666;
+  }
+  </style>
+
   <link rel="shortcut icon" href="app/img/icon.jpg">
   <meta name="description" content="Frases - Bacharel em Sistemas de Informação">
 </head>
@@ -13,8 +72,8 @@
 
   <main class="main-container">
     <div class="quote-container ng-cloak">
-      <p>{{bsi.frase}}</p>
-      <small>{{bsi.author}}</small>
+      <blockquote class="quote__">{{bsi.frase}}</blockquote>
+      <small class="author__">{{bsi.author}}</small>
     </div>
   </main>
 
