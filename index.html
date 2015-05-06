@@ -183,8 +183,18 @@
       { "author" : "Maurício", "frase": "Chegaram cedo pro chá!" },
       { "author" : "João", "frase": "update tabela set sal = (sal * 2,5) where usuario <> fabricio" }
     ];
-
-    $scope.bsi = $scope.frases[parseInt(Math.floor(Math.random() * $scope.frases.length))];
+    
+    $scope.init = function(){
+      setInterval(function(){
+        $scope.sort();    
+      }, 10000)
+    }
+    
+    $scope.sort = function(){
+      $scope.bsi = $scope.frases[parseInt(Math.floor(Math.random() * $scope.frases.length))];
+    }
+    
+    $scope.init();
 
   }]);
   </script>
