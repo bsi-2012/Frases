@@ -192,6 +192,7 @@
     
     $scope.sort = function(){
       $scope.bsi = $scope.frases[parseInt(Math.floor(Math.random() * $scope.frases.length))];
+      $scope.$digest();
     }
     
     $scope.init();
