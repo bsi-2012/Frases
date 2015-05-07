@@ -95,7 +95,7 @@
 
     $scope.frases = [
       { "author" : "Fábio Dippold", "frase" : "Cadê o UML?" },
-      { "author" : "Professor Luciano", "frase" : "Cadê a Silvana?" },
+      { "author" : "Luciano", "frase" : "Cadê a Silvana?" },
       { "author" : "Mauri", "frase" : "E ferrou!" },
       { "author" : "Turma BSI", "frase" : "João, apaga a luz!" },
       { "author" : "Pandini", "frase" : "Fecha o ar e desliga a janela!" },
@@ -182,14 +182,15 @@
       { "author" : "Cleiton", "frase": "O vanerão do nego véio?!" },
       { "author" : "Maurício", "frase": "Chegaram cedo pro chá!" },
       { "author" : "João", "frase": "update tabela set sal = (sal * 2,5) where usuario <> fabricio" },
-      { "author" : "Maurício", "frase": "É defodele." }
+      { "author" : "Maurício", "frase": "É defodele." },
+      { "author" : "Anônimo", "frase": "08/05 - Aniversário do Fábio Dippold." }
     ];
     
     $scope.init = function(){
       $scope.sort();
       setInterval(function(){
         $scope.sort();
-      }, 3000);
+      }, 4000);
     }
     
     $scope.sort = function(){
