@@ -200,7 +200,7 @@
     
     $scope.sort = function(){
       //$scope.bsi = $scope.frases[parseInt(Math.floor(Math.random() * $scope.frases.length))];
-      $scope.bsi = $scope.frases[$scope.frases.length];
+      $scope.bsi = $scope.frases[$scope.frases.length - 1];
       if(!$scope.$$phase){
         $scope.$digest(); 
       }
