@@ -188,6 +188,7 @@
       { "author" : "Martin", "frase": "Vão mudar o símbolo do dolar, agora vai ser o Pi. π" },
       { "author" : "Cristiano", "frase": "..." },
       { "author" : "Manfred", "frase": "Letra 3." }
+      { "author" : "teste", "frase": "&quot;" }
     ];
     
     $scope.init = function(){
@@ -198,7 +199,8 @@
     }
     
     $scope.sort = function(){
-      $scope.bsi = $scope.frases[parseInt(Math.floor(Math.random() * $scope.frases.length))];
+      //$scope.bsi = $scope.frases[parseInt(Math.floor(Math.random() * $scope.frases.length))];
+      $scope.bsi = $scope.frases[$scope.frases.length];
       if(!$scope.$$phase){
         $scope.$digest(); 
       }
